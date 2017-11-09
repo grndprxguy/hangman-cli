@@ -52,11 +52,11 @@ var userPrompt = function() {
             if (guesses.find(function(item) {
                     return item === resp.guess.toUpperCase();
                 })) {
-                console.log("\nYou already guessed that letter, silly. Try again.\n");
+                console.log("\nYou already guessed that letter.\n");
                 userPrompt();
             } else {
                 guesses.push(resp.guess.toUpperCase());
-                console.log("\nYour Guesses: " + guesses);
+                console.log("\nGuesses: " + guesses);
                 letFound = currentWord.check(resp.guess);
                 console.log("\nTries remaining:", tries);
                 console.log("\n" + currentWord.showWord() + "\n");
